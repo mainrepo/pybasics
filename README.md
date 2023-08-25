@@ -30,10 +30,9 @@ source /path/to/venv.d/bin/activate
 python src/pybasics.py
 ```
 ## Vital info
-The project uses poetry for python dependencies management.
-Here is a screenshot of the running sample.
+1. The project uses poetry (pyproject.toml) for python dependency management.
+2. Here is a screenshot of the running sample.
 ![](images/basic_run.png?raw=true)
-
-There are also vscode settings & launcher files. This can be run in debug mode as well.
+3. There are also vscode settings & launcher files. Hence, the project can be run in debug mode as well.
 ## License
 [MIT](https://choosealicense.com/licenses/mit/)
