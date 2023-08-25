@@ -1,0 +1,17 @@
+[tool.poetry]
+license = "MIT"
+version = "1.0.0"
+readme = "README.md"
+name = "pybasics"
+description = "The holder of basic python code samples"
+authors = ["Gaurav J. <gaurav.joshi@email.com>"]
+packages = [
+    {include = "pybasics.py", from="src", format="wheel"}
+]
+
+[tool.poetry.dependencies]
+python = "^3.9"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"

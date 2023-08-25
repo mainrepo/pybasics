@@ -1,0 +1,11 @@
+{
+    "files.exclude": {
+        "**/__pycache__": true
+    },
+    "workbench.tree.indent": 20,
+    "terminal.integrated.gpuAcceleration": "on",
+    "terminal.integrated.defaultProfile.linux": "zsh",
+    "terminal.integrated.sendKeybindingsToShell": true,
+    "python.terminal.activateEnvInCurrentTerminal": true,
+    "terminal.integrated.shellIntegration.suggestEnabled": true
+}
