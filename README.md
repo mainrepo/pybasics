@@ -26,8 +26,11 @@ source /path/to/venv.d/bin/activate
 ```
 ### Running
 ```shell
-# running the pybasic module which has to-do list
-python src/pybasics.py
+# running the todo module which has to-do list
+python src/todo.py
+
+# running the lists module which has list manipulations
+python src/lists.py
 ```
 ## Vital info
 1. The project uses poetry (pyproject.toml) for python dependency management.
