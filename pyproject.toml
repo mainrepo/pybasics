@@ -6,6 +6,7 @@ name = "pybasics"
 description = "The holder of basic python code samples"
 authors = ["Gaurav J. <gaurav.joshi@email.com>"]
 packages = [
+    {include = "todo.py", from="src", format="wheel"},
     {include = "pybasics.py", from="src", format="wheel"}
 ]
 

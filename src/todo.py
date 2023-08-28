@@ -64,29 +64,29 @@ def delete_tasks(task_no: int):
         print("No task to delete!")
     print('=' * term_size.columns)
 
+if '__main__' == __name__:
+    # Main loop
+    while True:
+        print("1. Add Task        2. View Tasks")
+        print("3. Mark Completed  4. Delete Task")
+        print("5. Quit ")
+        print('=' * term_size.columns)
 
-# Main loop
-while True:
-    print("1. Add Task        2. View Tasks")
-    print("3. Mark Completed  4. Delete Task")
-    print("5. Quit ")
-    print('=' * term_size.columns)
-
-    choice: str = input("Select an option: ")
-    
-    if choice == "1":
-        task_name: str = input("Enter task: ")
-        add_task(task_name)
-    elif choice == "2":
-        view_tasks()
-    elif choice == "3":
-        task_no: int = int(input("Enter task number: "))
-        complete_tasks(task_no)
-    elif choice == "4":
-        task_no: int = int(input("Enter task number: "))
-        delete_tasks(task_no)
-    elif choice == "5":
-        print("Goodbye!")
-        break
-    else:
-        print("Invalid choice. Please choose again.")
+        choice: str = input("Select an option: ")
+        
+        if choice == "1":
+            task_name: str = input("Enter task: ")
+            add_task(task_name)
+        elif choice == "2":
+            view_tasks()
+        elif choice == "3":
+            task_no: int = int(input("Enter task number: "))
+            complete_tasks(task_no)
+        elif choice == "4":
+            task_no: int = int(input("Enter task number: "))
+            delete_tasks(task_no)
+        elif choice == "5":
+            print("Goodbye!")
+            break
+        else:
+            print("Invalid choice. Please choose again.")

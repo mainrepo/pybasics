@@ -5,12 +5,14 @@
     "version": "0.2.0",
     "configurations": [
         {
-            "name": "Bacis Samples",
-            "type": "python",
-            "request": "launch",
-            "module": "src.pybasics",
+            "env": {},
+            "args": [],
             "jinja": true,
-            "justMyCode": true
+            "name": "pyrun",
+            "type": "python",
+            "justMyCode": true,
+            "request": "launch",
+            "program": "${file}",
         }
     ]
 }
