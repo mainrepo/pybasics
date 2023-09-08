@@ -7,11 +7,24 @@ description = "The holder of basic python code samples"
 authors = ["Gaurav J. <gaurav.joshi@email.com>"]
 packages = [
     {include = "todo.py", from="src", format="wheel"},
-    {include = "pybasics.py", from="src", format="wheel"}
+    {include = "panda.py", from="src", format="wheel"},
+    {include = "lists.py", from="src", format="wheel"},
+    {include = "tuple.py", from="src", format="wheel"},
+    {include = "pybasics.py", from="src", format="wheel"},
+    {include = "pizza_bot.py", from="src", format="wheel"}
 ]
 
 [tool.poetry.dependencies]
 python = "^3.9"
+pandas = "^2.1.0"
+faker = "^19.3.1"
+jupyter = "^1.0.0"
+openai = "^0.28.0"
+panel = "^1.2.2"
+poetry-dotenv = "^0.4.0"
+
+[tool.poetry.scripts]
+basics = "src.pybasics:__main__"
 
 [build-system]
 requires = ["poetry-core"]

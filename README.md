@@ -26,11 +26,17 @@ source /path/to/venv.d/bin/activate
 ```
 ### Running
 ```shell
+# running the pizza assistant, an openai bot
+# please set the environment variable OPENAI_API_KEY
+python src/pizza_bot.py
+
 # running the todo module which has to-do list
 python src/todo.py
 
 # running the lists module which has list manipulations
 python src/lists.py
+
+# likewise other programs can be run
 ```
 ## Vital info
 1. The project uses poetry (pyproject.toml) for python dependency management.

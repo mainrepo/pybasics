@@ -47,7 +47,7 @@ if '__main__' == __name__:
     print(f"sorted_numbers:  {sorted_numbers}")
     numbers.sort()  # Sorts the list in-place.
     print(f"in place sorting with numbers.sort:  {numbers}")
-    
+
     # Reversing a list:
     reversed_numbers = reversed(numbers)  # Creates a reversed iterator.
     print(f"reversed_numbers:  {reversed_numbers}")
@@ -57,7 +57,7 @@ if '__main__' == __name__:
     # Filtering elements:
     filtered_numbers = [x for x in numbers if x > 7]
     print(f"filtered_numbers greater than 7:  {filtered_numbers}")
-    
+
     # List comprehensions:
     numbers_squared = [x**2 for x in numbers]
     print(f"numbers_squared:  {numbers_squared}")
@@ -65,7 +65,7 @@ if '__main__' == __name__:
     # Mapping elements:
     mapped_numbers = [x * 2 for x in numbers]
     print(f"mapped_numbers to double each element:  {mapped_numbers}")
-    
+
     # Mapping elements after filtering:
     mapped_numbers = [x * 2 for x in numbers if x > 7]
     print(f"mapped_numbers to double each element after filtering:  {mapped_numbers}")
@@ -82,3 +82,48 @@ if '__main__' == __name__:
     # Clear: Removes all elements from the list.
     numbers.clear()
     print(f"after numbers.clear:  {numbers}")
+
+    # Nested List Comprehension (Matrix Transpose):
+    matrix = [[1, 2, 3], [4, 5, 6], [7, 8, 9]]
+    print(f"matrix:  {matrix}")
+    transpose = [[row[i] for row in matrix] for i in range(len(matrix[0]))]
+    print(f"matrix.transpose:  {transpose}")
+    '''
+    the inner comprehension [row[i] for row in matrix] iterates through each 
+    row and extracts the element at the same index i from each row, effectively 
+    transposing the matrix
+    '''
+
+    # Nested List Comprehension (Multiple Iterables):
+    pairs = [(x, y) for x in [1, 2, 3] for y in [10, 20, 30]]
+    print(f"multiple iterables:  {pairs}")
+
+    # Complex Transformation and Filtering:
+    words = ["apple", "banana", "cherry"]
+    vowels = ['a', 'e', 'i', 'o', 'u']
+    filtered_words = [word.upper() if word[0] in vowels else word.lower() for word in words]
+    print(f"filtered_words:  {filtered_words}")
+    
+    # Conditional Transformation and Flattening:
+    matrix = [[1, 2, 3], [4, 5, 6], [7, 8, 9]]
+    flattened_even = [num for row in matrix if any(row) for num in row if num % 2 == 0]
+    print(f"flattened_even:  {flattened_even}")
+    '''
+    This comprehension iterates through the matrix, flattening even numbers from each 
+    row only if the row contains at least one non-zero element.
+    '''
+
+    # List of Prime Numbers:
+    primes = [x for x in range(2, 100) if all(x % d != 0 for d in range(2, int(x**0.5)+1))]
+    print(f"primes:  {primes}")
+
+    # List Comprehension with Dictionary:
+    numbers = [1, 2, 3, 4, 5]
+    squared_dict = {x: x**2 for x in numbers}
+    print(f"squared_dict:  {squared_dict}")
+
+    # Fibonacci numbers
+    n = 10  # Number of Fibonacci numbers to generate
+    fibonacci = [0, 1]
+    fibonacci = [fibonacci[i-1] + fibonacci[i-2] for i in range(2, n)]
+    print(f"fibonacci:  {fibonacci}")
