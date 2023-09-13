@@ -22,6 +22,7 @@ jupyter = "^1.0.0"
 openai = "^0.28.0"
 panel = "^1.2.2"
 poetry-dotenv = "^0.4.0"
+reportlab = "^4.0.4"
 
 [tool.poetry.scripts]
 basics = "src.pybasics:__main__"
