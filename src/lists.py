@@ -123,7 +123,9 @@ if '__main__' == __name__:
     print(f"squared_dict:  {squared_dict}")
 
     # Fibonacci numbers
-    n = 10  # Number of Fibonacci numbers to generate
-    fibonacci = [0, 1]
-    fibonacci = [fibonacci[i-1] + fibonacci[i-2] for i in range(2, n)]
-    print(f"fibonacci:  {fibonacci}")
+    n = 5  # Number of Fibonacci numbers to generate
+    fib = [0, 1]
+    for i in range(2, n):
+        fib.append(fib[i-1] + fib[i-2])
+    # fib = [fib[i-1] + fib[i-2] for i in range(2, n)]
+    print(f"fibonacci:  {fib}")
